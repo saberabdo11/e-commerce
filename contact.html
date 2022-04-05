@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BI3LY-DZ | بيعليDZ</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="images/logo.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,500;1,100;1,200;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Start Header   And Cattegory -->
+    <header>
+      <div class="navbar">
+        <a href="index.html">
+          <img src="images/logo.png" width="100px" alt="" />
+        </a>
+        <nav>
+          <ul id="listMenu">
+            <img src="images/icon-close.svg" id="close" alt="" />
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="products.html">Produits</a></li>
+            <li class="active"><a href="index.html">Contactez nous</a></li>
+            <li><a href="index.html">Aidez</a></li>
+          </ul>
+        </nav>
+        <div class="langue">
+          <img src="images/ar.png" alt="" id="arFlag" width="50px" srcset="" />
+          <span id="ar">Arabic</span>
+        </div>
+        <div class="menu">
+          <img src="images/icon-menu.svg" id="menuToggle" alt="" />
+        </div>
+      </div>
+      <div class="cherche">
+        <div class="welcome">
+          <h2>BI3LY-DZ</h2>
+          <span>Fournir des produits de haute qualité</span>
+        </div>
+        <article>
+          <input
+            type="search"
+            placeholder="Recherche nos produits"
+            name="cherche"
+          />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </article>
+      </div>
+    </header>
+    <!-- End Header   And Cattegory -->
+
+    <!-- Start Contact Section -->
+
+    <section class="contact">
+      <div class="title">
+        <i class="fa-solid fa-headset"></i>
+        <h2>Contactez-nous</h2>
+        <p>pour achetez nos produits</p>
+      </div>
+      <div class="chat">
+        <a href="mailto: bi3lydz48@gmail.com" class="btn">Discute Avec Nous</a>
+        <a href="tel: 0770536086" class="btn">Appelez-nous</a>
+      </div>
+      <hr />
+      <div class="info">
+        <h3>Besoin d'aide pour acheter</h3>
+        <p>Appelez le numéro suivant</p>
+        <h1>خاص بالذكور :0770536086</h1>
+        <br />
+        <h1>الاناث:0798965446</h1>
+      </div>
+    </section>
+    <!-- End Contact Section -->
+
+    <!-- Start Footer -->
+    <footer>
+      <div class="row">
+        <div class="col-6">
+          <article>
+            <img src="images/logo.png" width="140px" alt="" />
+            <h3>Bienvenue a BI3LY-DZ</h3>
+            <p id="footerP">Pour fournir des products de haute qualité</p>
+          </article>
+        </div>
+        <div class="col-6">
+          <ul>
+            <h6>Suivez-nous sur les réseaux sociaux</h6>
+            <li>
+              <a href="https://www.facebook.com/profile.php?id=100079978637570"
+                ><i class="fa-brands fa-facebook fa-lg facebook"></i
+              ></a>
+            </li>
+            <!-- <li>
+            <a href=""
+              ><i class="fa-brands fa-instagram fa-lg instagram"></i
+            ></a>
+          </li> -->
+            <li>
+              <a
+                href="https://twitter.com/Bi3lyDz?t=0CLrVaHkCWlcvYCijubeBw&s=09"
+                ><i class="fa-brands fa-twitter fa-lg twitter"></i
+              ></a>
+            </li>
+          </ul>
+          <article>
+            <h4>Contactez nous pour demander votre products</h4>
+            <p id="wait">
+              Nous réjouissons de votre appel ou de votre courrier
+            </p>
+            <a href="#" class="btn">Contactez</a>
+          </article>
+        </div>
+      </div>
+      <p class="copy">Copyright &copy; 2022</p>
+    </footer>
+    <!-- End Footer -->
+    <script>
+      let menuToggle = document.getElementById("menuToggle");
+
+      let listMenu = document.getElementById("listMenu");
+
+      let closeMenu = document.getElementById("close");
+
+      menuToggle.onclick = function () {
+        listMenu.style.height = "calc(100vh - 100px)";
+      };
+
+      closeMenu.onclick = function () {
+        listMenu.style.height = "0";
+      };
+
+      // Transform Website TYo Arabic
+
+      let navLi = document.querySelectorAll("nav ul li a");
+
+      let welcome = document.querySelector(".cherche h2");
+      let welcomeSpan = document.querySelector(".cherche span");
+      let chercheInput = document.querySelector(".cherche input");
+
+      let footerHeadOne = document.querySelector("footer h3");
+      let footerP = document.getElementById("footerP");
+      let footerHeadSix = document.querySelector("footer h6");
+      let footerHeadFour = document.querySelector("footer h4");
+      let wait = document.getElementById("wait");
+      let footerBtn = document.querySelector("footer .btn");
+
+      let contactHead = document.querySelector(".contact .title h2");
+      let contactP = document.querySelector(".contact .title p");
+      let contactBtn = document.querySelectorAll(".chat .btn");
+      let infoHead = document.querySelector(".info h3");
+      let infoP = document.querySelector(".info p");
+
+      function ar() {
+        document.body.setAttribute("dir", "rtl");
+        document.body.style.cssText = "font-family: 'Almarai', sans-serif;";
+
+        // Translate Navbar
+        navLi[0].textContent = "الرئيسية";
+        navLi[1].textContent = "منتجات";
+        navLi[2].textContent = "اتصل بنا";
+        navLi[3].textContent = "مساعدة";
+
+        // Translate Cherche
+        welcome.textContent = "بيعلي-DZ";
+        welcomeSpan.textContent = "تقديم منتجات عالية الجودة";
+        chercheInput.placeholder = "بحث في منتجاتنا";
+
+        // Transalte Contact
+
+        contactHead.textContent = "اتصل بنا";
+        contactP.textContent = "لشراء منتجاتنا";
+        contactBtn[0].textContent = "دردش معنا";
+        contactBtn[1].textContent = "اتصل بنا";
+        infoHead.textContent = "بحاجة الى مساعدة في الشراء";
+        infoP.textContent = "اتصل بالرقم التالي";
+        // Translate Footer
+        footerHeadOne.textContent = "مرحبا بكم في بيعلي-DZ";
+        footerP.textContent = "تقديم منتجات عالية الجودة";
+        footerHeadSix.textContent = "تابعونا على الشبكات الاجتماعية";
+        footerHeadFour.textContent = "اتصل بنا لطلب منتجاتك";
+        wait.textContent = "نحن نتطلع إلى مكالمتك أو بريدك";
+        footerBtn.textContent = "اتصل";
+      }
+
+      let lg = document.getElementById("ar");
+
+      let arFlag = document.getElementById("arFlag");
+
+      lg.onclick = function () {
+        if ((lg.textContent = "Arabic")) {
+          arFlag.src = "images/fr.png";
+          ar();
+          lg.textContent = "Français";
+        } else {
+          window.localStorage.clear();
+          lg.textContent = "Arabic";
+          arFlag.src = "images/ar.png";
+        }
+      };
+    </script>
+
+    <script src="js/all.min.js"></script>
+  </body>
+</html>
